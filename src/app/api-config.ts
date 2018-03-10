@@ -1,8 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class ApiConfig {
-  private apiURL = 'http://localhost/BibliotecaV';
-  private headers = new HttpHeaders().set('Content-Type', 'application/json');
+  private apiURL: string;
+  private headers: HttpHeaders;
+
+  constructor() {
+    this.apiURL = 'http://debian/BibliotecaV/index.php';
+    this.headers = new HttpHeaders().set('Content-Type', 'application/json');
+  }
 
   getApiUrl(): string {
     return this.apiURL;
