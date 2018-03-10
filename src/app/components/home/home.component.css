@@ -1,0 +1,37 @@
+.background {
+  background-image: url("assets/bannerfinal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.background-black {
+  background: linear-gradient(to right,rgba(6, 6, 5, 0.93), rgba(0, 0, 0, 0));
+}
+.text-title {
+  text-shadow: 0.5px 1px black;
+  font-weight: bolder;
+}
+.search {
+  border: 2px solid white;
+  border-radius: 14px;
+  max-width: 350px;
+  margin: auto;
+}
+.input-search {
+  background-color: transparent;
+  border: none;
+  border-radius: 14px;
+  width: 85%;
+  color: #ffffff;
+}
+.icon-search {
+  height: 26px;
+  border-left: 2px solid white;
+  padding-left: 4px;
+  width: calc(15% - 6px);
+}
+.login-btn {
+  border: none;
+  background-color: green;
+  color: white;
+}

@@ -1,3 +1,54 @@
-<p>
-  home works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 background">
+      <div class="row">
+        <div class="col-sm-5 background-black">
+          <div class="p-25 text-white">
+            <div class="m-20 mb-40">
+              <img width="200px" src="assets/logofinal.png" alt="logo">
+            </div>
+            <div>
+              <div class="m-20">
+                <a>Matematicas</a>
+              </div>
+              <div class="m-20">
+                <a>FOGU</a>
+              </div>
+              <div class="m-20">
+                <a>Fisica</a>
+              </div>
+              <div class="m-20">
+                <a>Administracion</a>
+              </div>
+              <div class="m-20">
+                <a>Software</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="p-25 text-white">
+            <div class="m-20 mb-40">
+              <button class="float-right login-btn" >Inicio de sesion</button>
+            </div>
+            <div class="text-center pt-40">
+              <h1 class="text-title">Encuentra el libro que necesitas:</h1>
+            </div>
+            <div>
+              <div class="search">
+                <!-- <input class="input-search" type="text"> -->
+                <p-autoComplete styleClass="w-85 " [(ngModel)]="text" [suggestions]="results" 
+                (completeMethod)="search($event)" field="titulo" 
+                [emptyMessage]="'No hay libros'" inputStyleClass="input-search" ></p-autoComplete>
+                <img src="assets/search.svg" class="icon-search" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+  </div>
+</div>
