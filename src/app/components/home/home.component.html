@@ -5,23 +5,23 @@
         <div class="col-sm-5 background-black">
           <div class="p-25 text-white">
             <div class="m-20 mb-40">
-              <img width="200px" src="assets/logofinal.png" alt="logo">
+              <img width="250px" src="assets/logofinal.png" alt="logo">
             </div>
             <div>
               <div class="m-20">
-                <a>Matematicas</a>
+                <font size="5"><a>Matematicas</a></font>
               </div>
               <div class="m-20">
-                <a>FOGU</a>
+                <font size="5"><a>FOGU</a></font>
               </div>
               <div class="m-20">
-                <a>Fisica</a>
+                <font size="5"><a>Fisica</a></font>
               </div>
               <div class="m-20">
-                <a>Administracion</a>
+                <font size="5"><a>Administracion</a></font>
               </div>
               <div class="m-20">
-                <a>Software</a>
+                <font size="5"><a>Software</a></font>
               </div>
             </div>
           </div>
@@ -37,8 +37,8 @@
             <div>
               <div class="search">
                 <!-- <input class="input-search" type="text"> -->
-                <p-autoComplete styleClass="w-85 " [(ngModel)]="text" [suggestions]="results" 
-                (completeMethod)="search($event)" field="titulo" 
+                <p-autoComplete styleClass="w-85 " [(ngModel)]="text" [suggestions]="results"
+                (completeMethod)="search($event)" field="titulo"
                 [emptyMessage]="'No hay libros'" inputStyleClass="input-search" ></p-autoComplete>
                 <img src="assets/search.svg" class="icon-search" alt="">
               </div>
@@ -49,6 +49,130 @@
     </div>
   </div>
   <div class="row">
-
+    <div class="col-sm-12">
+      <div class="p-5 text-center">
+          <h1 style="color:#004D0A;">Libros populares</h1>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <table id="populares">
+      <tr>
+        <th><img width="180px" height="230" src="assets/calc.jpg" alt="Libro de Calculo"></th>
+        <th><img width="180px" height="230" src="assets/fis.jpg" alt="Libro de Fisica"></th>
+        <th><img width="180px" height="230" src="assets/dibuj.jpg" alt="Libro de Dibujo para Ingenieria"></th>
+        <th><img width="180px" height="230" src="assets/alg.jpg" alt="Libro de Algebra Lineal"></th>
+      </tr>
+      <tr>
+        <td><a>Calculo</a></td>
+        <td><a>Fisica para la ciencia y <br>la tecnologia</a></td>
+        <td><a>Dibujo tecnico con graficas <br>de ingenieria</a></td>
+        <td><a>Algebra lineal</a></td>
+      </tr>
+      <tr>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+      </tr>
+    </table>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-sm-12 background2">
+      <br><br><br><br><br><br>
+      <div class="row">
+        <div class="col-sm-12 text-white">
+          <div class="text-center pt-30">
+            <h1 class="text-title">¿Quieres subir un libro que no tengamos?</h1>
+            <h1 class="text-title">¡Hazlo ahora mismo!</h1>
+            <br>
+            <div class="col-sm-12">
+              <div class="m-20 mb-40">
+                <button class="float-center botton-vermas">Ver mas</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="p-5 text-center">
+          <h1 style="color:#004D0A;">Libros recientes</h1>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <table id="recientes">
+      <tr>
+        <th><img width="180px" height="230" src="assets/calc.jpg" alt="Libro de Calculo"></th>
+        <th><img width="180px" height="230" src="assets/fis.jpg" alt="Libro de Fisica"></th>
+        <th><img width="180px" height="230" src="assets/dibuj.jpg" alt="Libro de Dibujo para Ingenieria"></th>
+        <th><img width="180px" height="230" src="assets/alg.jpg" alt="Libro de Algebra Lineal"></th>
+      </tr>
+      <tr>
+        <td><a>Calculo</a></td>
+        <td><a>Fisica para la ciencia y <br>la tecnologia</a></td>
+        <td><a>Dibujo tecnico con graficas <br>de ingenieria</a></td>
+        <td><a>Algebra lineal</a></td>
+      </tr>
+      <tr>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+        <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
+      </tr>
+    </table>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-sm-12 background-green">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 footer">
+      <div class="row">
+        <div class="col-sm-5 text-white">
+          <div class="p-20 float-right">
+            <font size="5">Categorias</font>
+            <div class="m-10">
+              <button class="float-right botton-footer">Matematicas</button>
+            </div>
+            <div class="m-10">
+              <button class="float-right botton-footer">Fisica</button>
+            </div>
+            <div class="m-10">
+              <button class="float-right botton-footer">Software</button>
+            </div>
+            <div class="m-10">
+              <button class="float-right botton-footer">FOGU</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 text-white">
+          <div class="p-20 float-right">
+            <font size="5">Mi Cuenta</font>
+            <div class="m-10">
+              <button class="float-right botton-footer">Perfil</button>
+            </div>
+            <div class="m-10">
+              <button class="float-right botton-footer">Libros favoritos</button>
+            </div>
+            <div class="m-10">
+              <button class="float-right botton-footer">Libros subidos</button>
+            </div>
+            <div class="m-10">
+              <button class="float-right botton-footer">Cerrar sesion</button>
+            </div>
+          </div>
+        </div>
+        <div class="m-1">
+          <br><br><br>
+          <img width="250px" src="assets/logofinal.png" alt="logo">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
