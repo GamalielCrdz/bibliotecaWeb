@@ -5,7 +5,7 @@
         <div class="col-sm-5 background-black">
           <div class="p-25 text-white">
             <div class="m-20 mb-40">
-              <img width="250px" src="assets/logofinal.png" alt="logo">
+              <a href="#"><img width="250px" src="assets/logofinal.png" alt="logo"></a>
             </div>
             <div>
               <div class="m-20">
@@ -40,7 +40,7 @@
                 <p-autoComplete styleClass="w-85 " [(ngModel)]="text" [suggestions]="results"
                 (completeMethod)="search($event)" field="titulo"
                 [emptyMessage]="'No hay libros'" inputStyleClass="input-search" ></p-autoComplete>
-                <img src="assets/search.svg" class="icon-search" alt="">
+                <a href="#/busqueda"><img src="assets/search.svg" class="icon-search" alt=""></a>
               </div>
             </div>
           </div>
@@ -55,19 +55,19 @@
       </div>
     </div>
   </div>
-  <div class="text-center">
+  <div class="text-center text-black">
     <table id="populares">
       <tr>
-        <th><img width="180px" height="230" src="assets/calc.jpg" alt="Libro de Calculo"></th>
-        <th><img width="180px" height="230" src="assets/fis.jpg" alt="Libro de Fisica"></th>
-        <th><img width="180px" height="230" src="assets/dibuj.jpg" alt="Libro de Dibujo para Ingenieria"></th>
-        <th><img width="180px" height="230" src="assets/alg.jpg" alt="Libro de Algebra Lineal"></th>
+        <th><a href="#/visualizacion1"><img width="180px" height="230" src="assets/calc.jpg" alt="Libro de Calculo"></a></th>
+        <th><a href="#/visualizacion2"><img width="180px" height="230" src="assets/fis.jpg" alt="Libro de Fisica"></a></th>
+        <th><a href="#/visualizacion3"><img width="180px" height="230" src="assets/dibuj.jpg" alt="Libro de Dibujo para Ingenieria"></a></th>
+        <th><a href="#/visualizacion4"><img width="180px" height="230" src="assets/alg.jpg" alt="Libro de Algebra Lineal"></a></th>
       </tr>
       <tr>
-        <td><a>Calculo</a></td>
-        <td><a>Fisica para la ciencia y <br>la tecnologia</a></td>
-        <td><a>Dibujo tecnico con graficas <br>de ingenieria</a></td>
-        <td><a>Algebra lineal</a></td>
+        <td><a id="l" href="#/visualizacion1">Calculo</a></td>
+        <td><a id="l1" href="#/visualizacion2">Fisica para la ciencia y <br>la tecnologia</a></td>
+        <td><a id="l1" href="#/visualizacion3">Dibujo tecnico con graficas <br>de ingenieria</a></td>
+        <td><a id="l" href="#/visualizacion4">Algebra lineal</a></td>
       </tr>
       <tr>
         <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
@@ -107,16 +107,16 @@
   <div class="text-center">
     <table id="recientes">
       <tr>
-        <th><img width="180px" height="230" src="assets/calc.jpg" alt="Libro de Calculo"></th>
-        <th><img width="180px" height="230" src="assets/fis.jpg" alt="Libro de Fisica"></th>
-        <th><img width="180px" height="230" src="assets/dibuj.jpg" alt="Libro de Dibujo para Ingenieria"></th>
-        <th><img width="180px" height="230" src="assets/alg.jpg" alt="Libro de Algebra Lineal"></th>
+        <th><a href="#/visualizacion1"><img width="180px" height="230" src="assets/calc.jpg" alt="Libro de Calculo"></a></th>
+        <th><a href="#/visualizacion2"><img width="180px" height="230" src="assets/fis.jpg" alt="Libro de Fisica"></a></th>
+        <th><a href="#/visualizacion3"><img width="180px" height="230" src="assets/dibuj.jpg" alt="Libro de Dibujo para Ingenieria"></a></th>
+        <th><a href="#/visualizacion4"><img width="180px" height="230" src="assets/alg.jpg" alt="Libro de Algebra Lineal"></a></th>
       </tr>
       <tr>
-        <td><a>Calculo</a></td>
-        <td><a>Fisica para la ciencia y <br>la tecnologia</a></td>
-        <td><a>Dibujo tecnico con graficas <br>de ingenieria</a></td>
-        <td><a>Algebra lineal</a></td>
+        <td><a id="l" href="#/visualizacion1">Calculo</a></td>
+        <td><a id="l1" href="#/visualizacion2">Fisica para la ciencia y <br>la tecnologia</a></td>
+        <td><a id="l1" href="#/visualizacion3">Dibujo tecnico con graficas <br>de ingenieria</a></td>
+        <td><a id="l" href="#/visualizacion4">Algebra lineal</a></td>
       </tr>
       <tr>
         <td><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star.png" alt="Puntuacion"><img width="30px" height="30" src="assets/star1.png" alt="Puntuacion"></td>
@@ -170,7 +170,7 @@
         </div>
         <div class="m-1">
           <br><br><br>
-          <img width="250px" src="assets/logofinal.png" alt="logo">
+          <a href="#"><img width="250px" src="assets/logofinal.png" alt="logo"></a>
         </div>
       </div>
     </div>

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 background2">
+      <div class="m-20 mb-40">
+        <div class="p-10 text-center">
+          <div class="menu">
+            <a href="#"><img width="250px" src="assets/logofinal.png" alt="logo"></a>
+            <a>Matematicas</a>
+            <a>Fisica</a>
+            <a>Software</a>
+            <a>FOGU</a>
+            <a><img width="60px" height="60px" src="assets/user.png" alt="logo"></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-white">
+          <div class="text-center pt-30">
+            <h1 class="text-title">Seguir buscando:</h1>
+            <br>
+            <div>
+              <div class="search">
+                <!-- <input class="input-search" type="text"> -->
+                <p-autoComplete styleClass="w-85 " [(ngModel)]="text" [suggestions]="results"
+                (completeMethod)="search($event)" field="titulo"
+                [emptyMessage]="'No hay libros'" inputStyleClass="input-search" ></p-autoComplete>
+                <a href="#/busqueda"><img src="assets/search.svg" class="icon-search" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
