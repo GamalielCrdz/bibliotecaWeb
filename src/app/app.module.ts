@@ -15,6 +15,7 @@ import { Vista2Component } from './components/vista2/vista2.component';
 import { Vista3Component } from './components/vista3/vista3.component';
 import { Vista4Component } from './components/vista4/vista4.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
     Vista2Component,
     Vista3Component,
     Vista4Component,
-    BusquedaComponent
+    BusquedaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
     AutoCompleteModule,
     FormsModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes, { useHash: true })
+    RouterModule.forRoot(routes)
   ],
   providers: [LibrosService],
   bootstrap: [AppComponent]
