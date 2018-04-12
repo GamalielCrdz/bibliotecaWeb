@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   text: string;
 
-  results: string[];
+  results: string[] = [];
 
   libros: any;
 
@@ -24,7 +24,11 @@ export class HomeComponent implements OnInit {
   }
 
   search(event) {
-    this.results = this.libros;
+    if (this.results.length > 0) {
+
+    } else {
+      this.results = this.libros;
+    }
   }
 
 }

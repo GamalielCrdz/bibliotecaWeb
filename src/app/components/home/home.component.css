@@ -2,10 +2,81 @@
   background-image: url("assets/bannerfinal.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 580px;
   background-position: center;
 }
 .background-black {
   background: linear-gradient(to right,rgba(6, 6, 5, 0.93), rgba(0, 0, 0, 0));
+  height: 580px;
+}
+.background-green{
+  background-color: #004D0A;
+  height: 15px;
+}
+.footer{
+  height: 280px;
+  background-color: #202020;
+  text-align: center;
+  color: #ffffff;
+}
+.background2 {
+  background-image: url("assets/foto_oscurecida.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 580px;
+  background-position: center;
+}
+.botton-vermas{
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px 25px;
+}
+.botton-footer{
+  background-color: #939393;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  padding: 5px 15px;
+  margin: 4px;
+  width: 180px; height: 30px;
+}
+#populares {
+    ffont-family: "Gill Sans Medium", Helvetica;
+    border-collapse: collapse;
+    width: 100%;
+}
+#populares td, #populares th {
+    border: 0px solid #ffffff;
+    padding: 10px;
+}
+#populares th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: black;
+}
+#recientes {
+    ffont-family: "Gill Sans Medium", Helvetica;
+    border-collapse: collapse;
+    width: 100%;
+}
+#recientes td, #recientes th {
+    border: 0px solid #ffffff;
+    padding: 10px;
+}
+#recientes th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: black;
 }
 .text-title {
   text-shadow: 0.5px 1px black;
@@ -34,4 +105,14 @@
   border: none;
   background-color: green;
   color: white;
+}
+#l{
+  color: #004D0A;
+  text-decoration: none;
+  font-size: 25px;
+}
+#l1{
+  color: #004D0A;
+  text-decoration: none;
+  font-size: 20px;
 }

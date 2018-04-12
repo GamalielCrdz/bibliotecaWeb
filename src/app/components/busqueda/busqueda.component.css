@@ -1,0 +1,40 @@
+.background2 {
+  background-image: url("assets/foto_oscurecida.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 580px;
+  background-position: center;
+}
+.search {
+  border: 2px solid white;
+  border-radius: 14px;
+  max-width: 350px;
+  margin: auto;
+}
+.input-search {
+  background-color: transparent;
+  border: none;
+  border-radius: 14px;
+  width: 85%;
+  color: #ffffff;
+}
+.icon-search {
+  height: 26px;
+  border-left: 2px solid white;
+  padding-left: 4px;
+  width: calc(15% - 6px);
+}
+div.menu {
+    background-color: transparent;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.menu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    text-decoration: none;
+    font-size: 25px;
+}
