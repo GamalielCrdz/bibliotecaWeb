@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Vista1Component } from './vista1.component';
+import { VistaComponent } from './vista.component';
 
-describe('Vista1Component', () => {
-  let component: Vista1Component;
-  let fixture: ComponentFixture<Vista1Component>;
+describe('VistaComponent', () => {
+  let component: VistaComponent;
+  let fixture: ComponentFixture<VistaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Vista1Component ]
+      declarations: [ VistaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Vista1Component);
+    fixture = TestBed.createComponent(VistaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

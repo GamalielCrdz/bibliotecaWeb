@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LibrosService } from '../../services/libro.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,27 +9,34 @@ import { LibrosService } from '../../services/libro.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private librosService: LibrosService) { }
+  constructor(private librosService: LibrosService,
+    private router: Router
+  ) { }
 
   text: string;
 
   results: string[] = [];
 
-  libros: any;
+  libros: any[] = [];
 
   ngOnInit() {
     this.librosService.getBooks().subscribe(response => {
-      this.libros = response;
-      console.log(response);
+      this.libros.push(...response);
+      console.log(this.libros);
     });
   }
 
   search(event) {
-    if (this.results.length > 0) {
+    this.results = this.libros.filter(value => {
+      if (value.titulo.toUpperCase().includes(this.text.toUpperCase())) {
+        return value;
+      }
+    });
+  }
 
-    } else {
-      this.results = this.libros;
-    }
+  goToSearch() {
+    this.librosService.setSearch(this.results);
+    this.router.navigateByUrl('/busqueda');
   }
 
 }

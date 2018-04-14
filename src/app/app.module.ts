@@ -10,10 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { routes } from './app-routing';
 import { LibrosService } from './services/libro.service';
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { Vista1Component } from './components/vista1/vista1.component';
-import { Vista2Component } from './components/vista2/vista2.component';
-import { Vista3Component } from './components/vista3/vista3.component';
-import { Vista4Component } from './components/vista4/vista4.component';
+import { VistaComponent } from './components/vista/vista.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { LoginComponent } from './components/login/login.component';
 
@@ -21,10 +18,7 @@ import { LoginComponent } from './components/login/login.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    Vista1Component,
-    Vista2Component,
-    Vista3Component,
-    Vista4Component,
+    VistaComponent,
     BusquedaComponent,
     LoginComponent
   ],

@@ -9,6 +9,7 @@ import { LibrosService } from '../../services/libro.service';
 export class BusquedaComponent implements OnInit {
   results: string[] = [];
   libros: any;
+  text: string = "";
 
   constructor(private librosService: LibrosService) { }
 
@@ -17,11 +18,23 @@ export class BusquedaComponent implements OnInit {
       this.libros = response;
       console.log(response);
     });
+    this.librosService.currentSearch.subscribe(results => {
+      if (results.length > 0) {
+        this.results = results;
+      }
+    });
   }
+
   search(event) {
-    if (this.results.length === 0) {
-      this.results = this.libros;
-    }
+    
+      this.results = this.libros.filter(value => {
+        if (value.titulo.toUpperCase().includes(this.text.toUpperCase())) {
+          return value;
+        }
+      });
+    
   }
+
+
 
 }
