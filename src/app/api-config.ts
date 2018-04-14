@@ -5,7 +5,7 @@ export class ApiConfig {
   private headers: HttpHeaders;
 
   constructor() {
-    this.apiURL = 'http://debian/BibliotecaV/index.php';
+    this.apiURL = 'http://localhost/BibliotecaV/index.php';
     this.headers = new HttpHeaders().set('Content-Type', 'application/json');
   }
 

@@ -1,9 +1,0 @@
-.background-green{
-  background-color: #004D0A;
-  height: 85px;
-}
-
-.background-gray{
-  background: linear-gradient(to bottom,rgba(102, 102, 102, 1), rgba(147, 147, 147, 1));
-  background-size: cover;
-}

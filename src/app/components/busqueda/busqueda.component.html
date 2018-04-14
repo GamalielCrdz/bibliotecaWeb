@@ -25,9 +25,9 @@
             <div>
               <div class="search">
                 <!-- <input class="input-search" type="text"> -->
-                <p-autoComplete styleClass="w-85 " [suggestions]="results" (completeMethod)="search($event)" field="titulo" [emptyMessage]="'No hay libros'"
-                  inputStyleClass="input-search"></p-autoComplete>
-                <a href="#/busqueda">
+                <p-autoComplete styleClass="w-85 " [suggestions]="results" (completeMethod)="search($event)" field="titulo" 
+                [emptyMessage]="'No hay libros'" [(ngModel)]="text"  inputStyleClass="input-search"></p-autoComplete>
+                <a>
                   <img src="assets/search.svg" class="icon-search" alt="">
                 </a>
               </div>
@@ -36,25 +36,28 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <div class="p-25">
         <h3 style="color: #004d0a;font-weight: bold;">
           Resultados
         </h3>
         <div class="result-list">
-          <div class="result-item row">
+          <div *ngFor="let result of results" class="result-item row m-5" style="cursor: pointer" [routerLink]="'/visualizacion/' + result.id_libro"> 
             <div class="col-sm-4">
               <img width="150px" height="200px" src="assets/fis.jpg" alt="">
             </div>
             <div class="col-sm-8">
-              <h4 style="cursor: pointer" [routerLink]="'/visualizacion2'"> Fisica para ingenierias y ciencias</h4>
+              <h4>
+                {{result.titulo}}
+              </h4>
               <div>
                 <img width="30px" height="30" src="assets/star.png" alt="Puntuacion">
                 <img width="30px" height="30" src="assets/star.png" alt="Puntuacion">
                 <img width="30px" height="30" src="assets/star1.png" alt="Puntuacion">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Autor: {{result.autor}} <br>
+                  Edicion: {{result.edicion}} <br>
+                  <!-- Año: {{result.año}}  -->
                 </p>
               </div>
             </div>
@@ -63,7 +66,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="p-25">
         <h4 style="color: #004d0a;font-weight: bold;">
           Libros populares
