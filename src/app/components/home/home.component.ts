@@ -17,11 +17,11 @@ export class HomeComponent implements OnInit {
 
   results: string[] = [];
 
-  libros: any[] = [];
+  libros: any = [];
 
   ngOnInit() {
     this.librosService.getBooks().subscribe(response => {
-      this.libros.push(...response);
+      this.libros = response;
       console.log(this.libros);
     });
   }
