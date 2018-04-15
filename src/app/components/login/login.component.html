@@ -3,21 +3,21 @@
     <img width="250px" src="assets/logofinal.png" alt="logo">
     <!-- <h1>THE LOGO</h1> -->
     <!-- <h2>A cool headline.</h2> -->
-    <form>
+    <div>
       <input type="radio" id="login" name="action" value="login" checked>
       <input type="radio" id="register" name="action" value="register">
       <input type="radio" id="reset" name="action" value="reset">
       <div id="inputs">
         <div>
-          <input type="text" placeholder="email">
+          <input [(ngModel)]="email" type="text" placeholder="email">
           <div>
-            <input type="password" placeholder="password">
+            <input [(ngModel)]="password" type="password" placeholder="password">
             <div>
               <input type="password" placeholder="repeat password">
               <input type="submit" value="reset password">
               <div>
                 <input type="submit" value="register">
-                <input type="submit" value="login">
+                <input (click)="logIn()" type="submit" value="login">
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
           <span>Create an account</span>
         </label>
       </div>
-    </form>
+    </div>
   </div>
 
   
