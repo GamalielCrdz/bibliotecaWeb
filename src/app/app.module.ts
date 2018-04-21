@@ -13,6 +13,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { VistaComponent } from './components/vista/vista.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { LoginComponent } from './components/login/login.component';
     BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [LibrosService],
+  providers: [LibrosService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
