@@ -26,4 +26,14 @@ export class LibrosService {
     return this.http.get(this.apiConfig.getApiUrl() + `/libros/libro?id_libro=${id}&format=json`, { headers });
   }
 
+  getCategories() {
+    const headers = this.apiConfig.getHeaders();
+    return this.http.get(this.apiConfig.getApiUrl() + `/libros/categorias?format=json`, { headers });
+  }
+
+  getLibrosByCategories(categoryId) {
+    const headers = this.apiConfig.getHeaders();
+    return this.http.get(this.apiConfig.getApiUrl() + `/libros/categorias_libros?id_categoria=${categoryId}`, { headers });
+  }
+
 }

@@ -19,6 +19,10 @@ export const routes: Routes = [
     component: BusquedaComponent,
   },
   {
+    path: 'busqueda/:category',
+    component: BusquedaComponent,
+  },
+  {
     path: 'login',
     component: LoginComponent,
   }

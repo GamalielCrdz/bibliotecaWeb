@@ -19,11 +19,14 @@ export class HomeComponent implements OnInit {
 
   libros: any = [];
 
+  categories: any = [];
+
   ngOnInit() {
     this.librosService.getBooks().subscribe(response => {
       this.libros = response;
       console.log(this.libros);
     });
+    this.getCategories();
   }
 
   search(event) {
@@ -37,6 +40,18 @@ export class HomeComponent implements OnInit {
   goToSearch() {
     this.librosService.setSearch(this.results);
     this.router.navigateByUrl('/busqueda');
+  }
+
+  getCategories() {
+    this.librosService.getCategories().subscribe(response => {
+      this.categories = response;
+    });
+  }
+
+  setResult(event) {
+    console.log(event);
+    this.results = [];
+    this.results.push(event);
   }
 
 }

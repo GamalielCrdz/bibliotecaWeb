@@ -1,6 +1,6 @@
 <div class="background-login">
   <div id="wrapper">
-    <img width="250px" src="assets/logofinal.png" alt="logo">
+    <img style="cursor: pointer" [routerLink]="'/'" width="250px" src="assets/logofinal.png" alt="logo" >
     <!-- <h1>THE LOGO</h1> -->
     <!-- <h2>A cool headline.</h2> -->
     <div>
@@ -13,10 +13,10 @@
           <div>
             <input [(ngModel)]="password" type="password" placeholder="password">
             <div>
-              <input type="password" placeholder="repeat password">
+              <input [(ngModel)]="passwordConfirmation" type="password" placeholder="repeat password">
               <input type="submit" value="reset password">
               <div>
-                <input type="submit" value="register">
+                <input (click)="register()" type="submit" value="register">
                 <input (click)="logIn()" type="submit" value="login">
               </div>
             </div>

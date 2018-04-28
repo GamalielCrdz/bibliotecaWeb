@@ -10,12 +10,13 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   logIn(user: any) {
-    console.log(user);
-    let params = new URLSearchParams();
-    params.append('email', user.email);
-    params.append('contrasena', user.contrasena);
     const headers = this.apiConfig.getHeaders();
     return this.http.post(this.apiConfig.getApiUrl() + '/Login/entrar', user);
+  }
+
+  createUser(user: any) {
+    const headers = this.apiConfig.getHeaders();
+    return this.http.post(this.apiConfig.getApiUrl() + '/Login/registro', user);
   }
 
 }

@@ -4,7 +4,7 @@
       <div class="m-20 mb-40">
         <div class="p-10 text-center">
           <div class="menu">
-            <a href="#">
+            <a routerLink='/'>
               <img width="250px" src="assets/logofinal.png" alt="logo">
             </a>
             <a>Matematicas</a>
@@ -25,8 +25,8 @@
             <div>
               <div class="search">
                 <!-- <input class="input-search" type="text"> -->
-                <p-autoComplete styleClass="w-85 " [suggestions]="results" (completeMethod)="search($event)" field="titulo" 
-                [emptyMessage]="'No hay libros'" [(ngModel)]="text"  inputStyleClass="input-search"></p-autoComplete>
+                <p-autoComplete styleClass="w-85 " [suggestions]="results" (completeMethod)="search($event)" field="titulo" [emptyMessage]="'No hay libros'"
+                  [(ngModel)]="text" inputStyleClass="input-search"></p-autoComplete>
                 <a>
                   <img src="assets/search.svg" class="icon-search" alt="">
                 </a>
@@ -41,8 +41,8 @@
         <h3 style="color: #004d0a;font-weight: bold;">
           Resultados
         </h3>
-        <div class="result-list">
-          <div *ngFor="let result of results" class="result-item row m-5" style="cursor: pointer" [routerLink]="'/visualizacion/' + result.id_libro"> 
+        <div *ngIf="results.length > 0" class="result-list">
+          <div *ngFor="let result of results" class="result-item row m-5" style="cursor: pointer" [routerLink]="'/visualizacion/' + result.id_libro">
             <div class="col-sm-4">
               <img width="150px" height="200px" src="assets/fis.jpg" alt="">
             </div>
@@ -55,14 +55,20 @@
                 <img width="30px" height="30" src="assets/star.png" alt="Puntuacion">
                 <img width="30px" height="30" src="assets/star1.png" alt="Puntuacion">
                 <p>
-                  Autor: {{result.autor}} <br>
-                  Edicion: {{result.edicion}} <br>
+                  Autor: {{result.autor}}
+                  <br> Edicion: {{result.edicion}}
+                  <br>
                   <!-- Año: {{result.año}}  -->
                 </p>
               </div>
             </div>
 
           </div>
+        </div>
+        <div *ngIf="results.length == 0">
+          <h1>
+            No se encontraron libros
+          </h1>
         </div>
       </div>
     </div>
