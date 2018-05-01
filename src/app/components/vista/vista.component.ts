@@ -23,16 +23,10 @@ export class VistaComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRouter.params.subscribe(params => {
-      console.log(params);
       this.libroService.getBook(params.id).subscribe(response => {
-        console.log(response);
         this.libro = response;
       });
     });
-  }
-
-  libroUrl() {
-    return
   }
 
 }

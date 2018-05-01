@@ -21,7 +21,6 @@ export class BusquedaComponent implements OnInit {
   ngOnInit() {
     this.librosService.getBooks().subscribe(response => {
       this.libros = response;
-      console.log(response);
     });
     this.librosService.currentSearch.subscribe(results => {
       if (results.length > 0) {
@@ -34,7 +33,6 @@ export class BusquedaComponent implements OnInit {
           const respuesta: any = response;
           this.results = [];
           this.results.push(...respuesta.categoria);
-          console.log(this.results);
         });
       }
     });
@@ -48,6 +46,9 @@ export class BusquedaComponent implements OnInit {
     });
   }
 
-
+  setResult(event) {
+    this.results = [];
+    this.results.push(event);
+  }
 
 }

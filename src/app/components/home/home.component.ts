@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.librosService.getBooks().subscribe(response => {
       this.libros = response;
-      console.log(this.libros);
       for (let index = 0; index < 5; index++) {
         const indexBook = this.getRandomInt(0, (this.libros.length - 1));
         this.popularBooksS.push(this.libros[indexBook]);
@@ -40,8 +39,6 @@ export class HomeComponent implements OnInit {
           this.popularBooks.push(this.libros.slice(firstbook, (firstbook + 4)));
         }
       }
-      console.log('popular books S', this.popularBooksS);
-      console.log('popular books', this.popularBooks);
     });
     this.getCategories();
   }
@@ -66,7 +63,6 @@ export class HomeComponent implements OnInit {
   }
 
   setResult(event) {
-    console.log(event);
     this.results = [];
     this.results.push(event);
   }

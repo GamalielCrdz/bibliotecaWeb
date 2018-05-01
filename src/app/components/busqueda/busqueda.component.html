@@ -7,13 +7,7 @@
             <a routerLink='/'>
               <img width="250px" src="assets/logofinal.png" alt="logo">
             </a>
-            <a>Matematicas</a>
-            <a>Fisica</a>
-            <a>Software</a>
-            <a>FOGU</a>
-            <a>
-              <img width="60px" height="60px" src="assets/user.png" alt="logo">
-            </a>
+
           </div>
         </div>
       </div>
@@ -25,7 +19,7 @@
             <div>
               <div class="search">
                 <!-- <input class="input-search" type="text"> -->
-                <p-autoComplete styleClass="w-85 " [suggestions]="results" (completeMethod)="search($event)" field="titulo" [emptyMessage]="'No hay libros'"
+                <p-autoComplete styleClass="w-85 " (onSelect)="setResult($event)" [suggestions]="results" (completeMethod)="search($event)" field="titulo" [emptyMessage]="'No hay libros'"
                   [(ngModel)]="text" inputStyleClass="input-search"></p-autoComplete>
                 <a>
                   <img src="assets/search.svg" class="icon-search" alt="">
