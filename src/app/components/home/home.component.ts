@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LibrosService } from '../../services/libro.service';
 import { Router } from '@angular/router';
+import { ApiConfig } from '../../api-config';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,8 @@ export class HomeComponent implements OnInit {
   ) { }
 
   text: string;
+
+  apiCOnfig: ApiConfig = new ApiConfig();
 
   results: string[] = [];
 

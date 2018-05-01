@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LibrosService } from '../../services/libro.service';
 import { ActivatedRoute } from '@angular/router';
+import { ApiConfig } from '../../api-config';
 
 @Component({
   selector: 'app-busqueda',
@@ -12,6 +13,7 @@ export class BusquedaComponent implements OnInit {
   libros: any = [];
   text: string = '';
   categoryId: number;
+  apiCOnfig: ApiConfig = new ApiConfig();
 
   constructor(private librosService: LibrosService,
     private activatedRouter: ActivatedRoute) { }

@@ -56,7 +56,7 @@
         <div class="carousel-inner">
           <div *ngFor="let books of popularBooks; let i = index" [ngClass]="{'active': i == 0 }" class="carousel-item">
             <div *ngFor="let book of books" id="l1" [routerLink]="'/visualizacion/' + book.id_libro" class="book-card text-center cursor-pointer">
-              <img width="80%" height="230" src="assets/calc.jpg" alt="Libro de Calculo">
+              <img width="80%" height="230" src="{{apiCOnfig.getApiUrlForBooks() + book.rutaImagen}}" alt="Libro de Calculo">
               <h5 class="text-truncate">{{book.titulo}}</h5>
             </div>
           </div>
@@ -78,7 +78,7 @@
           <div *ngFor="let book of popularBooksS; let i = index" [ngClass]="{'active': i == 0 }" 
           [routerLink]="'/visualizacion/' + book.id_libro" class="carousel-item active text-center">
             
-            <img width="80%" height="270" src="assets/calc.jpg" alt="Libro de Calculo">
+            <img width="80%" height="270" src="{{apiCOnfig.getApiUrlForBooks() + book.rutaImagen}}" alt="Libro de Calculo">
             
             <div>
               <h3 style="color: #004D0A"> 
