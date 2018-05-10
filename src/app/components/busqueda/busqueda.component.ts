@@ -11,8 +11,9 @@ import { ApiConfig } from '../../api-config';
 export class BusquedaComponent implements OnInit {
   results: string[] = [];
   libros: any = [];
-  text: string = '';
+  text: string;
   categoryId: number;
+  popularBooks: any[] = [];
   apiCOnfig: ApiConfig = new ApiConfig();
 
   constructor(private librosService: LibrosService,
@@ -21,6 +22,10 @@ export class BusquedaComponent implements OnInit {
   ngOnInit() {
     this.librosService.getBooks().subscribe(response => {
       this.libros = response;
+      for (let index = 0; index < 4; index++) {
+        const indexBook = this.getRandomInt(0, (this.libros.length - 1));
+        this.popularBooks.push(this.libros[indexBook]);
+      }
     });
     this.librosService.currentSearch.subscribe(results => {
       if (results.length > 0) {
@@ -49,6 +54,10 @@ export class BusquedaComponent implements OnInit {
   setResult(event) {
     this.results = [];
     this.results.push(event);
+  }
+
+  getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
 }

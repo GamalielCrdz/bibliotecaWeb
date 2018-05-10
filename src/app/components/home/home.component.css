@@ -1,5 +1,5 @@
 .background {
-  background-image: url("assets/bannerfinal.jpg");
+  background-image: url("../../../assets/bannerfinal.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@
   color: #ffffff;
 }
 .background2 {
-  background-image: url("assets/foto_oscurecida.jpg");
+  background-image: url("../../../assets/foto_oscurecida.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 580px;

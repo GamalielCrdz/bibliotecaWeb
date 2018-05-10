@@ -18,19 +18,22 @@
             </font>
           </div>
         </div>
-        <div class="col-sm-1 p-15">
+        <!--         <div class="col-sm-1 p-15">
           <div class=" float-center">
             <img width="55px" height="55" src="assets/pause.png" alt="Pausar">
           </div>
-        </div>
-        <div class="col-sm-1 p-15">
+        </div> -->
+        <div *ngIf="libro.rutaAudio" class="col-sm-1 p-15">
           <div class=" float-center">
-            <img width="55px" height="55" src="assets/speaker.png" alt="Volumen ">
+            <a href="{{libro.rutaAudio}}">
+              <img width="55px" height="55" src="assets/speaker.png" alt="Volumen ">
+              <small>Download Audio</small>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <iframe style="height: 85%;width: 100%;left: 0;right: 0;position: absolute;" *ngIf="libro.rutaPDF" [src]="sanitizer.bypassSecurityTrustResourceUrl(libro.rutaPDF)" class="w-100"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0"></iframe>
+  <iframe style="height: 80%;width: 100%;left: 0;right: 0;position: absolute;" *ngIf="libro.rutaPDF" [src]="sanitizer.bypassSecurityTrustResourceUrl(libro.rutaPDF)"
+    class="w-100" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0"></iframe>
 </div>

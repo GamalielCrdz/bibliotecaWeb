@@ -19,8 +19,8 @@
             <div>
               <div class="search">
                 <!-- <input class="input-search" type="text"> -->
-                <p-autoComplete styleClass="w-85 " (onSelect)="setResult($event)" [suggestions]="results" (completeMethod)="search($event)" field="titulo" [emptyMessage]="'No hay libros'"
-                  [(ngModel)]="text" inputStyleClass="input-search"></p-autoComplete>
+                <p-autoComplete styleClass="w-85 " (onSelect)="setResult($event)" [suggestions]="results" (completeMethod)="search($event)"
+                  field="titulo" [emptyMessage]="'No hay libros'" [(ngModel)]="text" inputStyleClass="input-search"></p-autoComplete>
                 <a>
                   <img src="assets/search.svg" class="icon-search" alt="">
                 </a>
@@ -71,6 +71,12 @@
         <h4 style="color: #004d0a;font-weight: bold;">
           Libros populares
         </h4>
+        <div *ngFor="let book of popularBooks" [routerLink]="'/visualizacion/' + book.id_libro" class="cursor-pointer">
+          <img width="150px" height="200px" src="{{apiCOnfig.getApiUrlForBooks() + book.rutaImagen}}" alt="">
+          <h4>
+            {{book.titulo}}
+          </h4>
+        </div>
       </div>
     </div>
   </div>
