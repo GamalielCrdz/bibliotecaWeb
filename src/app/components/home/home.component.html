@@ -75,13 +75,13 @@
     <div *ngIf="popularBooksS.length > 0" class="col-sm-12 d-sm-block d-md-none">
       <div id="carouselSmall" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div *ngFor="let book of popularBooksS; let i = index" [ngClass]="{'active': i == 0 }" 
+          <div *ngFor="let book of popularBooksS; let i = index" [ngClass]="{'active': i == 0 }"
           [routerLink]="'/visualizacion/' + book.id_libro" class="carousel-item active text-center">
-            
+
             <img width="80%" height="270" src="{{apiCOnfig.getApiUrlForBooks() + book.rutaImagen}}" alt="Libro de Calculo">
-            
+
             <div>
-              <h3 style="color: #004D0A"> 
+              <h3 style="color: #004D0A">
                 {{book.titulo}}
               </h3>
             </div>
@@ -99,7 +99,7 @@
     </div>
     <!-- Carrousel Mobile -->
   </div>
-<!--
+
   <div class="row">
     <div class="col-sm-12 background2">
       <br>
@@ -111,20 +111,19 @@
       <div class="row">
         <div class="col-sm-12 text-white">
           <div class="text-center pt-30">
-            <h1 class="text-title">¿Quieres subir un libro que no tengamos?</h1>
-            <h1 class="text-title">¡Hazlo ahora mismo!</h1>
+            <h1 style="margin: 0 auto; width: 80%;" class="text-title">Espera próximas actualizaciones, se vendrán nuevas funciones para los usuarios</h1>
             <br>
-            <div class="col-sm-12">
+            <!-- <div class="col-sm-12">
               <div class="m-20 mb-40">
                 <button class="float-center botton-vermas">Ver mas</button>
               </div>
-            </div>
+            </div> -->
           </div>
-        </div >
+        </div>
       </div>
     </div>
-  </div> -->
-  
+  </div>
+
 
   <!--   <div class="row">
     <div class="col-sm-12">
