@@ -1,13 +1,12 @@
 .background {
-  background-image: url("assets/bannerfinal.jpg");
+  background-image: url("../../../assets/bannerfinal.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 580px;
   background-position: center;
 }
 .background-black {
   background: linear-gradient(to right,rgba(6, 6, 5, 0.93), rgba(0, 0, 0, 0));
-  height: 580px;
+  
 }
 .background-green{
   background-color: #004D0A;
@@ -20,10 +19,10 @@
   color: #ffffff;
 }
 .background2 {
-  background-image: url("assets/foto_oscurecida.jpg");
+  background-image: url("../../../assets/foto_oscurecida.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 580px;
+  height: 440px;
   background-position: center;
 }
 .botton-vermas{
@@ -115,4 +114,8 @@
   color: #004D0A;
   text-decoration: none;
   font-size: 20px;
+}
+.book-card {
+  width: 24%;
+  display: inline-block;
 }

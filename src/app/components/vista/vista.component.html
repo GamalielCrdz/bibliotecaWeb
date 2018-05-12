@@ -1,0 +1,41 @@
+<div class="container-fluid" style="height: 100%">
+  <div class="row">
+    <div class="col-sm-12 background-green">
+      <div class="row">
+        <div class="col-sm-2 p-10">
+          <div class="text-center">
+            <a routerLink=''>
+              <img src="assets/left-arrow.png" alt="Regresar">
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-8 text-white">
+          <div class="m-15 text-center">
+            <font size="6">
+              <p *ngIf="libro.titulo">
+                {{libro.titulo + ', ' + libro.autor}}
+              </p>
+            </font>
+          </div>
+        </div>
+        <!--         <div class="col-sm-1 p-15">
+          <div class=" float-center">
+            <img width="55px" height="55" src="assets/pause.png" alt="Pausar">
+          </div>
+        </div> -->
+        <div *ngIf="libro.rutaAudio" class="col-sm-2 p-15">
+          <div class="text-center text-white">
+            <div>
+              <small>Este libro contiene audio, descarga aqui</small>
+            </div>
+            <a href="{{libro.rutaAudio}}">
+              <img width="55px" height="55" src="assets/download.svg" alt="Volumen ">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <iframe style="height: 80%;width: 100%;left: 0;right: 0;position: absolute;" *ngIf="libro.rutaPDF" [src]="sanitizer.bypassSecurityTrustResourceUrl(libro.rutaPDF)"
+    class="w-100" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0"></iframe>
+</div>
