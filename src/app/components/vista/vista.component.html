@@ -3,7 +3,7 @@
     <div class="col-sm-12 background-green">
       <div class="row">
         <div class="col-sm-2 p-10">
-          <div class="float-right">
+          <div class="text-center">
             <a routerLink=''>
               <img src="assets/left-arrow.png" alt="Regresar">
             </a>
@@ -23,11 +23,13 @@
             <img width="55px" height="55" src="assets/pause.png" alt="Pausar">
           </div>
         </div> -->
-        <div *ngIf="libro.rutaAudio" class="col-sm-1 p-15">
-          <div class=" float-center">
+        <div *ngIf="libro.rutaAudio" class="col-sm-2 p-15">
+          <div class="text-center text-white">
+            <div>
+              <small>Este libro contiene audio, descarga aqui</small>
+            </div>
             <a href="{{libro.rutaAudio}}">
-              <img width="55px" height="55" src="assets/speaker.png" alt="Volumen ">
-              <small>Download Audio</small>
+              <img width="55px" height="55" src="assets/download.svg" alt="Volumen ">
             </a>
           </div>
         </div>

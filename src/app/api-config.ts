@@ -8,6 +8,8 @@ export class ApiConfig {
   constructor() {
     this.apiURL = 'https://fimebookapi.herokuapp.com/index.php';
     this.apiURLForBooks = 'https://fimebookapi.herokuapp.com/';
+    // this.apiURL = 'http://localhost/BibliotecaV/index.php';
+    // this.apiURLForBooks = 'http://localhost/BibliotecaV/';
     this.headers = new HttpHeaders().set('Content-Type', 'application/json');
   }
 
